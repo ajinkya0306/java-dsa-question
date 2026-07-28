@@ -30,7 +30,7 @@ public class mergearray {
 	}
 	public static void main (String args[]) {
 		int a[]= {1,2,3,4};
-		int b[]= {5,6,7,8};
+		int b[]= {4,6,7,8};
 		int ans[]=merge(a,b);
 		for(int x:ans) {
 			System.out.print(x+"");

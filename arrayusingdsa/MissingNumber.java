@@ -14,7 +14,7 @@ public class MissingNumber {
         for (int i = 0; i < n - 1; i++) {
             arr[i] = sc.nextInt();
         }
-
+System.out.println(arr.length);
         int missing = findMissing(arr, n);
         System.out.println("Missing number is: " + missing);
     }

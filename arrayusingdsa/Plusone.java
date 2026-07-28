@@ -34,7 +34,10 @@ public class Plusone {
     	}
     	// int[] digits = {9, 9, 9};
         int[] result = plus(digits);
-        System.out.println(Arrays.toString(result));  // prints [1, 0, 0, 0]
+//	        for(int i=0;i<result.length;i++) {
+//	        	System.out.print(result[i]+" , ");
+//	        }
+           System.out.println(Arrays.toString(result));  // prints [1, 0, 0, 0]
     }
 
 }

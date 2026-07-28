@@ -10,7 +10,7 @@ public class Binarysearch {
 
         while (left <= right) {
             int mid = left + (right - left) / 2;
-
+System.out.println(mid);
             if (arr[mid] == x) {
                 return mid;
             } 

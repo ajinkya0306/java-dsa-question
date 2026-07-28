@@ -1,5 +1,6 @@
 package arrayusingdsa;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RemoveDuplicate {
@@ -14,7 +15,7 @@ public class RemoveDuplicate {
         for (int i = 0; i < length; i++) {
             arr[i] = sc.nextInt();
         }
-
+        Arrays.sort(arr);
         int newLength = removeDuplicates(arr);
 
         System.out.println("Array after removing duplicates:");
