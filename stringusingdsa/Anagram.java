@@ -14,25 +14,25 @@ public class Anagram {
 	        }
 
 	        // Step 2: Frequency map
-	        HashMap<Character, Integer> freq = new HashMap<>();
+	        HashMap<Character, Integer> map = new HashMap<>();
 
 	        // Step 3: Count frequency for first string
 	        for (int i = 0; i < s1.length(); i++) {
 	            char ch = s1.charAt(i);
-	            freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+	            map.put(ch, map.getOrDefault(ch, 0) + 1);
 	        }
 
 	        // Step 4: Decrease frequency using second string
 	        for (int i = 0; i < s2.length(); i++) {
 	            char ch = s2.charAt(i);
-	            if (!freq.containsKey(ch)) {
+	            if (!map.containsKey(ch)) {
 	                return false; // char not in first string
 	            }
-	            freq.put(ch, freq.get(ch) - 1);
+	            map.put(ch, map.get(ch) - 1);
 	        }
 
 	        // Step 5: All frequencies must be 0
-	        for (int value : freq.values()) {
+	        for (int value : map.values()) {
 	            if (value != 0) {
 	                return false;
 	            }
@@ -52,5 +52,23 @@ public class Anagram {
 	    }
 	}
 
-
+//leetcode apprach 
+//if (s.length() != t.length()) {
+//    return false;
+//}
+//
+//int[] count = new int[26];
+//
+//for (int i = 0; i < s.length(); i++) {
+//    count[s.charAt(i) - 'a']++;
+//    count[t.charAt(i) - 'a']--;
+//}
+//
+//for (int num : count) {
+//    if (num != 0) {
+//        return false;
+//    }
+//}
+//
+//return true;
 
